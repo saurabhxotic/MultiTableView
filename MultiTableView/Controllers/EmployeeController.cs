@@ -48,6 +48,7 @@ namespace MultiTableView.Controllers
         public IActionResult SaveAddress(AddressDetail addressDetail)
         {
             var result = _EmployeeBL.SaveAddressDetail(addressDetail);
+            ViewData["AddressMessage"] = "Address added successfully";
             return PartialView("_Address",addressDetail);
         }
 
@@ -55,6 +56,7 @@ namespace MultiTableView.Controllers
         public IActionResult SaveFamily(FamilyDetail familyDetail)
         {
             var result = _EmployeeBL.SaveFamilyDetail(familyDetail);
+            ViewData["FamilyMessage"] = "Family added successfully";
             return PartialView("_Family", familyDetail);
         }
     }

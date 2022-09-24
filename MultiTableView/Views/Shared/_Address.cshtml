@@ -2,6 +2,7 @@
 
 @{
     Layout = null;
+    var message = ViewData["AddressMessage"] ?? string.Empty;
 }
 
 <!DOCTYPE html>
@@ -23,13 +24,19 @@
 
 </head>
 <body>
+    @if (message != "")
+    {
+        <div class="alert alert-danger" role="alert">
+            @message
+        </div>
+    }
     <div class="container">
         <div class="row" id="address">
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-12 offset-md-12">
                 <h4>AddressDetail</h4>
                 <hr />
                 @*<div class="row pr-3 pl-3" id="panel">*@
-                <form id="my_form" asp-action="SaveAddress" method="post" data-ajax="true" data-ajax-method="post" data-ajax-update="#address" data-ajax-mode='replace' data-ajax-url="@Url.Action("SaveAddress","Employee")">
+                <form id="my_form" asp-action="SaveAddress" method="post" data-ajax="true" data-ajax-method="post" data-ajax-update="#address" data-ajax-url="@Url.Action("SaveAddress","Employee")">
                     <div class="form-row">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="form-group col-md-6">
@@ -68,7 +75,6 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label asp-for="EmpId" class="control-label"></label>
                         <input hidden asp-for="EmpId" class="form-control" />
                     </div>
                     <div class="form-group">

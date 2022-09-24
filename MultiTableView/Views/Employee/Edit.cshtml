@@ -10,10 +10,21 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Edit</title>
+
 </head>
 <body>
-    <partial name="_Address" model="Model.addressDetail"/>
-    <partial name="_Family" model="Model.familyDetail"/>
+   
+    <table style="width:100%">
+        <tr>
+            <td style="width:50%; border-right:0.5px solid;background:azure">
+                <partial name="_Address" model="Model.addressDetail" />
+
+            </td>
+            <td style="width:50%;background:cornsilk">
+                <partial name="_Family" model="Model.familyDetail" />
+            </td>
+        </tr>
+    </table>
     <div>
         <a asp-action="Index">Back to List</a>
     </div>
