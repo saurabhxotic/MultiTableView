@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Practice\\MultiTableView\\MultiTableView\\MultiTableView.csproj": {}
+    "C:\\Users\\Saura\\Source\\Repos\\MultiTableView\\MultiTableView\\MultiTableView.csproj": {}
   },
   "projects": {
-    "C:\\Practice\\MultiTableView\\MultiTableView\\MultiTableView.csproj": {
+    "C:\\Users\\Saura\\Source\\Repos\\MultiTableView\\MultiTableView\\MultiTableView.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Practice\\MultiTableView\\MultiTableView\\MultiTableView.csproj",
+        "projectUniqueName": "C:\\Users\\Saura\\Source\\Repos\\MultiTableView\\MultiTableView\\MultiTableView.csproj",
         "projectName": "MultiTableView",
-        "projectPath": "C:\\Practice\\MultiTableView\\MultiTableView\\MultiTableView.csproj",
+        "projectPath": "C:\\Users\\Saura\\Source\\Repos\\MultiTableView\\MultiTableView\\MultiTableView.csproj",
         "packagesPath": "C:\\Users\\Saura\\.nuget\\packages\\",
-        "outputPath": "C:\\Practice\\MultiTableView\\MultiTableView\\obj\\",
+        "outputPath": "C:\\Users\\Saura\\Source\\Repos\\MultiTableView\\MultiTableView\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
