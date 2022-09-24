@@ -1,0 +1,80 @@
+﻿@model MultiTableView.Models.FamilyDetail
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Family</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row pr-3 pl-3" id="family">
+            <div class="col-md-6 offset-md-3">
+                <h4>FamilyDetail</h4>
+                <hr />
+                <form asp-action="SaveFamily"  method="post" data-ajax="true" data-ajax-method="post" data-ajax-update="#family" data-ajax-mode='replace' data-ajax-url="@Url.Action("SaveFamily","Employee")">
+                    <div class="form-row">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="FatherName" class="control-label"></label>
+                            <input asp-for="FatherName" class="form-control" />
+                            <span asp-validation-for="FatherName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="FatherEd" class="control-label"></label>
+                            <input asp-for="FatherEd" class="form-control" />
+                            <span asp-validation-for="FatherEd" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label asp-for="MotherName" class="control-label"></label>
+                            <input asp-for="MotherName" class="form-control" />
+                            <span asp-validation-for="MotherName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="MotherEd" class="control-label"></label>
+                            <input asp-for="MotherEd" class="form-control" />
+                            <span asp-validation-for="MotherEd" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label asp-for="fatherPhn" class="control-label"></label>
+                            <input asp-for="fatherPhn" class="form-control" />
+                            <span asp-validation-for="fatherPhn" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="FatherOccup" class="control-label"></label>
+                            <input asp-for="FatherOccup" class="form-control" />
+                            <span asp-validation-for="FatherOccup" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EmpId" class="control-label"></label>
+                        <input hidden asp-for="EmpId" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>
